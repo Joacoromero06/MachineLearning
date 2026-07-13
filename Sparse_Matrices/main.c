@@ -15,19 +15,20 @@ int main(int argc, char** argv){
   size_t n_nnz = 9;
 
   double b[] = {1, 2, 3, 4, 5};
-  double res;
+  double res[5];
   
   /* Algorithm */
   Sparse_Coordinate A_coo;
   create_Sparse_Coordinate(n_rows, n_cols, A, n_nnz, &A_coo);
   print_Sparse_Coordinate(&A_coo);
-  vector_matrix_coo(&A_coo, b, &res);
+  vector_matrix_coo(&A_coo, b, res);
+  free_Sparse_Coordinate(&A_coo);
 
   printf("{");
   for (int i = 0; i < n_cols; i++){
-    i == n_cols-1 ? printf("%f ,", b[i]) : printf("%f", b[i]);
+    i == n_cols-1 ? printf("%f", res[i]) : printf("%f, ", res[i]);
   }
-  printf("}");
+  printf("}\n");
 
   return EXIT_SUCCESS;
 }

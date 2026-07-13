@@ -20,10 +20,10 @@ int create_Sparse_Coordinate(
 );
 
 int free_Sparse_Coordinate(Sparse_Coordinate* A_coo);
-int print_Sparse_Coordinate( Sparse_Coordinate* A_coo);
+int print_Sparse_Coordinate(const Sparse_Coordinate* A_coo);
 int vector_matrix_coo(
-    Sparse_Coordinate* A_coo,
-    double * b,
+    const Sparse_Coordinate* A_coo,
+    const double * b,
     double * res
 );
 

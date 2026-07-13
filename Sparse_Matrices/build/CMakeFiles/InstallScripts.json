@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/joaco/GitHub/MachineLearning/Sparse_Matrices/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
